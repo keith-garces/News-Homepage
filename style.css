@@ -1,0 +1,218 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap");
+* {
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul {
+  list-style-type: none;
+}
+img {
+  max-width: 100%;
+  width: 100%;
+}
+p {
+  line-height: 1.5;
+  color: hsl(236, 13%, 42%);
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem;
+}
+.header #menu-button {
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.header nav.open {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0; 
+  background-color: #fff;
+  width: 75vw;
+  padding: 1.25rem;
+  z-index: 9999999999;
+  opacity: 0.9;
+}
+.header nav {
+    opacity: 0;
+    z-index: -9999;
+    transition: all 0.3s ease-in-out;
+}
+.header #menu-close {
+  background: transparent;
+  border: none;
+  outline: none;
+  position: absolute;
+  right: 1.25rem;
+  top: 1.6rem;
+  z-index: 9999;
+  cursor: pointer;
+}
+.header nav ul {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.header nav ul li {
+  margin: 1.5rem;
+  font-size: 16px;
+  cursor: pointer;
+}
+.shocase {
+  padding: 1.5rem;
+  padding-top: 0;
+}
+.shocase h1 {
+  font-size: 2rem;
+  background: linear-gradient(180deg, #1a0000 9.07%, #343b8d 91.76%);
+  background-clip: border-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 1rem 0;
+}
+.shocase div:first-child p {
+    margin-bottom: 1rem;
+}
+.shocase button {
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  background-color: hsl(5, 85%, 63%);
+  color: #fff;
+  padding: 0.8rem 2rem;
+  outline: none;
+  border: none;
+  transition: all 0.3s ease-in-out;
+}
+.shocase button:hover {
+    background-color: hsl(240, 100%, 5%);
+    cursor: pointer;
+}
+.hello {
+    background-color: hsl(240, 100%, 5%);
+    margin-top: 2rem;
+    padding: 1.25rem 1.25rem 0;
+}
+.hello h2 {
+    color: hsl(35, 77%, 62%);
+}
+.hello article h3 {
+    color: #fff;
+    margin-bottom: 0.5rem;
+}
+.hello article h3:hover {
+    color: hsl(35, 77%, 62%);
+    cursor: pointer;
+}
+.hello article:not(:last-child) {
+    border-bottom: 1px solid hsl(236, 13%, 42%);
+}
+.hello article {
+    padding: 1.25rem 0;
+}
+.cards {
+    padding: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    gap: 2.5rem;
+}
+.cards article {
+    display: flex;
+    align-items: top;
+    gap: 1.25rem;
+}
+.cards img {
+    width: 150px;
+    height: 200px;
+}
+.cards span {
+    color: hsl(236, 13%, 42%);
+    font-weight: bold;
+    font-size: 2rem;
+    opacity: 75%;
+}
+.cards h4 {
+    font-size: 1.25rem;
+    margin: 0.5rem 0;
+}
+@media (min-width: 768px) {
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        margin-top: 1rem;
+    }
+    .img {
+        width: 8vw;
+    }
+}
+@media (min-width: 1024px) {
+    .header nav {
+        opacity: 1;
+        z-index: auto;
+    }
+    .header nav.open {
+        position: relative;
+        width: auto;
+        background: transparent;
+        padding: 0;
+    }
+    .header nav ul {
+        position: relative;
+        top: 0;
+        transform: translate(0%);
+        display: flex;
+        gap: 2rem;
+    }
+    .header nav ul li {
+        margin: 0;
+    }
+    .header nav ul li:hover {
+        color: hsl(5, 85%, 63%);
+    }
+    .header #menu-close {
+        display: none;
+    }
+    .header .menu-button {
+        display: none;
+    }
+    .shocase {
+        display: flex;
+        gap: 2rem;
+    }
+    .hello {
+        margin-top: 0;
+        padding-bottom: 0;
+    }
+    #text {
+        display: flex;
+        gap: 4rem;
+        place-items: center;
+    }
+    .shocase h1 {
+        font-size: 2.5rem;
+    }
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+    }
+    /* .img {
+        width: 8vw;
+    } */
+    #lastA {
+        padding-bottom: 0;
+    }
+    body {
+        font-size: 15px;
+        max-width: 1120px;
+        margin: auto;
+        padding-bottom: 1rem;
+    }
+}
